@@ -1,4 +1,4 @@
-FROM mysql:8
+FROM mysql:8.0
 ENV MYSQL_ROOT_PASSWORD=ExpenseApp@1 
 
 RUN groupadd expense && \
