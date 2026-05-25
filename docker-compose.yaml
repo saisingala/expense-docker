@@ -1,3 +1,28 @@
+# version: "3"
+# networks:
+#   expense: #docker network create expense
+# volumes:
+#   mysql: #docker volume create mysql
+# services:
+#   mysql:
+#     image: saikumar227/mysql:v1
+#     container_name: mysql # --name mysql
+#     volumes: 
+#     - mysql:/var/lib/mysql # -v mysql:/var/lib/mysql
+#   backend:
+#     image: saikumar227/backend:v1
+#     container_name: backend
+#     command: sh -c "sleep 8 && node /opt/server/index.js"
+#     depends_on:
+#     - mysql
+#   frontend:
+#     image: saikumar227/frontend:v1
+#     container_name: frontend
+#     ports:
+#     - 80:80
+#     depends_on:
+#     - backend
+
 version: "3"
 networks:
   expense:
@@ -12,7 +37,7 @@ services:
   backend:
     image: saikumar227/backend:v1
     container_name: backend
-    command: sh -c "sleep 7 && node /opt/server/index.js"
+    command: sh -c "sleep 5 && node /opt/server/index.js"
     depends_on:
     - mysql
   frontend:
