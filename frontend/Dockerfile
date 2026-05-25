@@ -1,7 +1,7 @@
 FROM nginx:mainline-alpine3.23-perl
 
 RUN rm -rf /etc/nginx/nginx.conf && \
-    #rm -rf /etc/nginx/conf.d/default.conf && \
+    rm -rf /etc/nginx/conf.d/default.conf && \
     mkdir -p /var/cache/nginx/client_temp && \
     mkdir -p /var/cache/nginx/proxy_temp && \
     mkdir -p /var/cache/nginx/fastcgi_temp && \
