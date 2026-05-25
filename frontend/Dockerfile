@@ -1,4 +1,4 @@
-FROM nginx:mainline-alpine3.20-slim
+FROM nginx:mainline-alpine3.23-perl
 
 RUN rm -rf /etc/nginx/nginx.conf && \
     rm -rf /etc/nginx/conf.d/default.conf && \
